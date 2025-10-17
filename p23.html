@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BookLoop Presentation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #007bff, #00c6ff);
+      color: white;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .slide {
+      display: none;
+      text-align: center;
+      padding: 50px 20px;
+      width: 90%;
+      max-width: 900px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 25px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(8px);
+      animation: fadeIn 0.6s ease;
+    }
+
+    .active {
+      display: block;
+    }
+
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 20px;
+      color: #ffea00;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6em;
+    }
+
+    .founders {
+      font-size: 1.1em;
+      margin-top: 15px;
+      color: #ffea00;
+    }
+
+    .btns {
+      position: absolute;
+      bottom: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+    }
+
+    button {
+      background: #ffea00;
+      color: black;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 30px;
+      font-size: 1em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #fff;
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Welcome Page Animation */
+    .welcome {
+      text-align: center;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .welcome h1 {
+      font-size: 3em;
+      color: #ffea00;
+      margin-bottom: 15px;
+      animation: glow 2s infinite alternate;
+    }
+
+    .welcome p {
+      font-size: 1.3em;
+      color: #fff;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ffea00, 0 0 20px #ffea00; }
+      to { text-shadow: 0 0 20px #fff, 0 0 40px #ffea00; }
+    }
+
+    #startBtn {
+      margin-top: 40px;
+      padding: 15px 40px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.2em;
+      font-weight: 600;
+      color: black;
+      background: #ffea00;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #startBtn:hover {
+      background: #fff;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- WELCOME PAGE -->
+  <div class="slide active" id="welcomePage">
+    <div class="welcome">
+      <h1>📚 Welcome to BookLoop</h1>
+      <p>Where Old Books Find New Readers ❤️</p>
+      <button id="startBtn">Start Presentation ➡</button>
+    </div>
+  </div>
+
+  <!-- SLIDE 1 -->
+  <div class="slide">
+    <h1>📚 BookLoop</h1>
+    <h2>Old Books Buy & Sell Platform</h2>
+    <p>"Give Books a Second Life"</p>
+    <div class="founders">
+      Founders: Shaikh Arsalan • Onkar Sadgir • Sarthak Savant
+    </div>
+  </div>
+
+  <!-- SLIDE 2 -->
+  <div class="slide">
+    <h1>🎯 Problem Statement</h1>
+    <p>Many students have old books that they want to sell, but they don’t know whom to sell to.  
+    Because of this, they often give books to scrap dealers (“raddi”) at very low prices or throw them away.</p>
+  </div>
+
+  <!-- SLIDE 3 -->
+  <div class="slide">
+    <h1>💡 Our Solution</h1>
+    <p>We created <b>BookLoop</b>, a free online platform where anyone can <b>buy and sell old books easily</b>.  
+    Just upload your book’s photo, name, subject, standard, and address — buyers can directly contact you!</p>
+  </div>
+
+  <!-- SLIDE 4 -->
+  <div class="slide">
+    <h1>👥 Target Users</h1>
+    <p>🎓 School Students (8th–12th)</p>
+    <p>🏫 College Students</p>
+    <p>📖 Book Lovers looking for affordable study material</p>
+  </div>
+
+  <!-- SLIDE 5 -->
+  <div class="slide">
+    <h1>⚙️ Technologies Used</h1>
+    <p>✨ HTML, CSS, JavaScript</p>
+    <p>🔥 Firebase Authentication (Login System)</p>
+    <p>☁️ Firestore Database (Book Storage)</p>
+    <p>🖼️ Firebase Storage (Image Uploads)</p>
+    <p>🚀 Firebase Hosting (Free Deployment)</p>
+  </div>
+
+  <!-- SLIDE 6 -->
+  <div class="slide">
+    <h1>🧩 System Architecture</h1>
+    <p>Frontend (HTML, CSS, JS) ↔ Firebase Auth ↔ Firestore ↔ Storage</p>
+    <p>All integrated on Firebase — no paid servers required!</p>
+  </div>
+
+  <!-- SLIDE 7 -->
+  <div class="slide">
+    <h1>🌟 Features</h1>
+    <p>✅ Free Login & Signup</p>
+    <p>✅ Add Book (photo, name, subject, class, address)</p>
+    <p>✅ Search & Filter Books</p>
+    <p>✅ Contact Seller Directly</p>
+    <p>✅ Admin Dashboard</p>
+    <p>✅ Mobile Friendly Interface</p>
+  </div>
+
+  <!-- SLIDE 8 -->
+  <div class="slide">
+    <h1>🚀 How It Works</h1>
+    <p>1️⃣ User Creates Account</p>
+    <p>2️⃣ Adds Book Details + Photo</p>
+    <p>3️⃣ Buyers Browse Books</p>
+    <p>4️⃣ Contact Seller & Finalize Deal</p>
+    <p>Simple, Fast & Free!</p>
+  </div>
+
+  <!-- SLIDE 9 -->
+  <div class="slide">
+    <h1>📱 QR Code & Access</h1>
+    <p>Scan the QR on your college notice board to visit the website instantly!</p>
+    <p>Website URL: <b>https://bookloop.web.app</b></p>
+    <p>Platform made to make books reach the right hands, not the scrap yard.</p>
+  </div>
+
+  <!-- SLIDE 10 -->
+  <div class="slide">
+    <h1>🌈 Future Scope</h1>
+    <p>💬 In-app chat between buyer & seller</p>
+    <p>💳 Online payments (Razorpay)</p>
+    <p>📦 Delivery tracking system</p>
+    <p>📱 Mobile app version of BookLoop</p>
+    <br>
+    <h2>Thank You! 🙌</h2>
+    <p>Presented by <b>Team BookLoop</b></p>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="btns" id="navBtns" style="display:none;">
+    <button id="prevBtn">⬅ Prev</button>
+    <button id="nextBtn">Next ➡</button>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const navBtns = document.getElementById('navBtns');
+    let current = 0;
+
+    function showSlide(n) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[n].classList.add('active');
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    });
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
+    });
+
+    document.getElementById('startBtn').addEventListener('click', () => {
+      slides[0].classList.remove('active');
+      current = 1;
+      showSlide(current);
+      navBtns.style.display = 'flex';
+    });
+  </script>
+
+</body>
+</html>
